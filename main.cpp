@@ -1,25 +1,38 @@
-// RedBallTracker.cpp
+//=================================
+//	include guard
 
+
+//=================================
+//	forward declared dependencies
+
+
+//=================================
+//	included dependencies
+	//	opencv
 #include<opencv2/core/core.hpp>
-#include <opencv2/objdetect/objdetect.hpp>
+#include<opencv2/objdetect/objdetect.hpp>
 #include<opencv2/highgui/highgui.hpp>
 #include<opencv2/imgproc/imgproc.hpp>
-
+	//	standard
 #include<iostream>
 #include <stdio.h>
 
-/* basic namespaces for readabilty */
+
+//=================================
+//	namespaces for readabilty
 using namespace std;
 using namespace cv;
 
-/* Global variables */
+
+//=================================
+// Global variables 
 String face_cascade_name = "haarcascade_frontalface_alt.xml";
 CascadeClassifier face_cascade;
-CascadeClassifier eyes_cascade;
 String window_name_orig = "Capture - Original";
 String window_name_mod = "Capture - Modified";
 
-/* @function main */
+//=================================
+// main function
 int main() {
 	int error_pause;
 	//	1. Setup camera
