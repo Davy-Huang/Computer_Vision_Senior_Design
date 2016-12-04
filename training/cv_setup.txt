@@ -1,0 +1,29 @@
+Project -> (project name) Properties -> Configuration Properties -> VC++ Directories -> Include Directories
+add the include directory for your version of OpenCV, ex "C:\OpenCV-3.1.0\opencv\build\include"
+
+Project -> Properties -> Configuration Properties -> VC++ Directories -> Library Directories:
+add the library directory for your version of OpenCV, ex "C:\OpenCV-3.1.0\opencv\build\x64\vc14\lib"
+
+Copy/paste the name of the debug lib(s) in the lib directory into the following location in Visual Studio:
+Project -> Properties -> Configuration Properties -> Linker -> Input -> Additional Dependencies
+opencv_world310d.lib
+opencv_world310.lib
+
+TestVideo6_AVI.avi
+
+
+Negetives (.jpg)
+	create_list.bat will make a text file (description file) bg.text listing the negetive images .JPG
+Positive (.bmp)
+	Objectmaker.exe and Image Clipper are used to make the vectore file
+		Objectmaker.exe should have cv.ddl and highgui.dll in the same directory
+		There should also be a folder called rawdata with all the images
+	1. Draw the box from the top left to the bottom right
+	2. press SPACE to save the box
+	3. Repeat for each object WITHIN the picture
+	4. Hit ENTER to load the next iamge
+Vector
+	Use sample_creation.bat (you will need cv097.dll, cxcore097.dll, highgui097.dll, libguide40.dll, createsample.exe in the same director)
+haarTraining
+Making xml file
+	Copy files inside the cascade 0 to N-1 into cascade2xml/data
