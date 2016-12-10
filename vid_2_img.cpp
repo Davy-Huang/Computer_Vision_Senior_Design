@@ -10,15 +10,20 @@ using namespace cv;
 int main(int argc, char* argv[]) {
 	int x;
 
-		cout << "Please enter the name of the video file: " << endl;
+		cout << "Please enter the name of the video file: ";
 		string file_name;
 		getline(cin, file_name);
-		cout << "The entered file name is: "<< file_name << endl;
 
-		cout << "Please enter a name for the folder: " << endl;
+		cout << "Please enter a name for the folder: ";
 		string folder_name;
 		getline(cin, folder_name);
-		cout << "The enter fodler name is: " <<folder_name << endl;
+
+		cout << "'jpg' is best for Negetive sample data \n"
+				"'bmp' is best for Postive sample data \n"
+				"Enter the extenion: ";
+		string ext;
+		getline(cin, ext);
+
 
 		VideoCapture cap(file_name);
 		if (!cap.isOpened()) {
@@ -50,7 +55,7 @@ int main(int argc, char* argv[]) {
 			
 
 			try{
-			imwrite({ folder_name + "/" + file_name + '_' + to_string(n) + ".bmp" }, frame);
+			imwrite({ folder_name + "/" + file_name + '_' + to_string(n) + "." + ext }, frame);
 			}
 			catch (runtime_error& ex) {
 				fprintf(stderr, "Exception converting image to PNG format: %s\n", ex.what());

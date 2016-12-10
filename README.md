@@ -8,6 +8,7 @@ This repository focuses primarily on creating a Haar classifier and testing the 
  	
 vid_2_img is a program to convert video into individual frames
 	This is utilized for faster acquisition of positive and negative images for training
+	NOTE: The compiled folder contains the compiled executable for convience
 	
 The training folder contain the a basic directory structure to prepare the indexing of positive and negative images, and creation of a vector and actual training. 
 	Please read Creating_a_Cascade_of_Haar-Like_Classifiers_Step_by_Step.pdf from the Department of Computer Science, the University of Auckland for a detailed explanation.
