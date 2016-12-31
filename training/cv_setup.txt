@@ -9,8 +9,6 @@ Project -> Properties -> Configuration Properties -> Linker -> Input -> Addition
 opencv_world310d.lib
 opencv_world310.lib
 
-TestVideo6_AVI.avi
-
 
 Negetives (.jpg)
 	create_list.bat will make a text file (description file) bg.text listing the negetive images .JPG
@@ -27,3 +25,5 @@ Vector
 haarTraining
 Making xml file
 	Copy files inside the cascade 0 to N-1 into cascade2xml/data
+	
+Special thakns to the University of Auckland and Mahdi Rezaei  for posting documention on the orginal training process
